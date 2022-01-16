@@ -4,7 +4,13 @@ A Telegram Bot Written In Python To Upload Medias To telegra.ph
 # DEPLOY
 YOU CAN SIMPLY DEPLOY ON HEROKU BY CLICKING THE BUTTON BELOW
 
+HEROKU 
+
 [![Deploy To Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Benchamxd/Telegraph-Uploader/)
+
+RAILWAY
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template?template=https%3A%2F%2Fgithub.com%2Ftesterforappu2006%2FTelegraph-Uploader&envs=TG_BOT_TOKEN%2CAPI_HASH%2CAPP_ID&TG_BOT_TOKENDesc=bot+string+from+botfather&referralCode=appu2006)
 
 # Local Machine
 Clone the repository
