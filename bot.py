@@ -57,7 +57,7 @@ async def uploadgif(client, message):
       await msg.edit_text(f"https://telegra.ph{tlink[0]}")   
       os.remove(gif_path)   
     except:
-      await msg.edit_text("Something really Happend Wrong...") 
+      await msg.edit_text("Something really Happend Wrong... If Your Uploding more than 1 img at a time Try To Sent Them One by One ")
   else:
     await message.reply_text("Size Should Be Less Than 5 mb")
 
@@ -85,19 +85,19 @@ async def home(client, message):
         InlineKeyboardButton('Close', callback_data='close')
     ],
     [
-        InlineKeyboardButton('Our Channel', url='http://telegram.me/indusbots'),
-        InlineKeyboardButton('Source Code', url='https://github.com/benchamxd/Telegraph-Uploader')
+        InlineKeyboardButton('Our Channel', url='http://telegram.me/TMC_BOTX'),
+        InlineKeyboardButton('Source Code', url='https://t.me/+C_RwBhk_0bhkZWVl')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
         chat_id=message.chat.id,
         text="""<b>Hey there,
         
-im a telegraph Uploader That Can Upload Photo, Video And Gif
+i am telegraph Uploader That Can Upload Photo, Video And Gif
         
 Simply send me photo, video or gif to upload to Telegra.ph
         
-Made With Love By @indusBots</b>""",
+Made With Love By @MC_BOTX</b>""",
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=message.message_id
@@ -110,16 +110,16 @@ async def help(client, message):
         InlineKeyboardButton('Close', callback_data='close')
     ],
     [
-        InlineKeyboardButton('Our Channel', url='http://telegram.me/indusbots')
+        InlineKeyboardButton('Our Channel', url='http://telegram.me/TMC_BOTX')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
         chat_id=message.chat.id,
-        text="""There Is Nothung To KnowMore,
+        text="""There Is Nothung To Know More,
         
 Just Send Me A Video/gif/photo Upto 5mb.
 
-i'll upload ut to telegra.ph and give you the direct link""",
+i'll upload it to telegra.ph and give you the direct link""",
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=message.message_id
