@@ -82,7 +82,7 @@ async def uploadvid(client, message):
 async def home(client, message):
   buttons = [[
         InlineKeyboardButton('Help', callback_data='help'),
-        InlineKeyboardButton('Close', callback_data='close')
+        InlineKeyboardButton('about', callback_data='about')
     ],
     [
         InlineKeyboardButton('😎 credits 😎', url='http://telegram.me/TMC_BOTX'),
@@ -123,7 +123,28 @@ i'll upload it to telegra.ph and give you the direct link""",
         reply_markup=reply_markup,
         parse_mode="html",
         reply_to_message_id=message.message_id
-    )                           
+    )
+
+@Tgraph.on_message(filters.command(["about"]))
+async def about(client, message):
+  buttons = [[
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('Close', callback_data='close')
+    ],
+    [
+        InlineKeyboardButton('Our Channel', url='http://telegram.me/TMC_BOTX')
+    ]]
+  reply_markup = InlineKeyboardMarkup(buttons)
+  await Tgraph.send_message(
+        chat_id=message.chat.id,
+        text="""There Is Nothing To Know More,
+        
+Just Send Me A Video/gif/photo Upto 5mb.
+i'll upload it to telegra.ph and give you the direct link""",
+        reply_markup=reply_markup,
+        parse_mode="html",
+        reply_to_message_id=message.message_id
+    )
 @Tgraph.on_callback_query()
 async def button(Tgraph, update):
       cb_data = update.data
